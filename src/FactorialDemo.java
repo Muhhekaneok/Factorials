@@ -1,7 +1,8 @@
-public class LoopDemo {
+public class FactorialDemo {
     public static void main(String[] args) {
         System.out.println(getFactorialByLoop(5));
         System.out.println(getFactorialByRecursion(4));
+        System.out.println(getFactorialByTernarny(5));
     }
 
     // loop
@@ -18,5 +19,10 @@ public class LoopDemo {
         if (n == 1)
             return 1;
         return getFactorialByRecursion(n - 1) * n;
+    }
+
+    // ternarny
+    private static int getFactorialByTernarny(int n) {
+        return (n > 1) ? n * getFactorialByTernarny(n - 1) : 1;
     }
 }
